@@ -1,0 +1,101 @@
+# 
+# Welcome to GDB Online.
+# GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+# C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+# Code, Compile, Run and Debug online from anywhere in world.
+# 
+# 
+#!bin/sh/
+# echo "enter two numbers"
+# read a b
+# if [ $a == $b ]
+# then
+# echo "no are equal"
+# else
+# echo "no are no equal"
+# fi
+# echo "end"
+#-------------------------------------------------------
+# to check no is even or not
+# echo "enter no"
+# read n
+# rem=$(($n % 2))
+# if [ $rem -eq 0 ]
+# then
+# echo "$n is even no"
+# else
+# echo "$n is odd no"
+# fi    # for ending if else statement
+#--------------------------------------------------------
+#factorial of no
+# echo "enter no"
+# read n
+# fact=1
+# while [ $n -gt 1 ]
+# do                    # for starting curly bracket
+# fact=$((fact * n))
+# n=$((n - 1))
+# done     #for ending curly bracket
+# echo $fact
+
+# --------------------------------------------------------
+num=1
+rows=5
+for (( i = 0; i <=rows; i++ ))
+do
+for((j=1; j<=i ;j++))
+do
+echo -n "$num "
+num=$((num + 1))
+done
+num=1
+echo
+done
+#---------------------------------------------------------------
+#until
+i=0
+until [[ $i -eq 5 ]]
+do
+echo "$i";((i++))
+done
+#---------------------------------------------------------------
+# cases like switch cases
+# end case by ;;
+# and all by esac
+
+echo "enter name of country"
+read country
+echo "The official language of $country is"
+case $country in
+lithunia)
+echo -n "Romania"
+;;
+italy | "san marino"| switzerland | "vatican city")
+echo -n "italian"
+;;
+*)
+echo -n "unknown"
+;;
+esac
+
+#-------------------------------------------------------------------
+
+#! /bin/bash
+
+read -p "Enter number: " n
+
+d=2
+r=1 
+while [[ $d -lt $n && $r -ne 0 ]]
+do
+        r=`expr $n % $d`
+
+        d=`expr $d + 1`
+done
+
+if [[ $r -eq 0 ]]
+  then
+  echo "$n is not a prime number"
+else
+      echo "$n is a prime number"
+fi
